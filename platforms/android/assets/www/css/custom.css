@@ -1,0 +1,63 @@
+/*自定义图片样式*/
+
+/*界面整体背景色*/
+.ui-page {
+    background: #e0d9c4;
+}
+
+.ui-bar-g {
+    background-color: red;
+}
+/*手机列表项背景*/
+.ui-icon-home-bg_wen {
+    background-image: url("../img/bg_wen.png");
+    background-size: 100% 100%;
+}
+
+/*下面图标*/
+.ui-icon-home-shouye:after {
+    background-image: url("../img/icon_shouye2.png");
+}
+
+.ui-icon-home-huodong:after {
+    background-image: url("../img/icon_huodong.png");
+}
+
+.ui-icon-home-fenxiang:after {
+    background-image: url("../img/icon_fenxiang.png");
+}
+
+.ui-icon-home-geren:after {
+    background-image: url("../img/icon_geren.png");
+
+}
+
+/*activity活动*/
+
+/*主题活动表头背景*/
+#bg-activity {
+    background-color: #8E0007;
+}
+
+/*搜素框样式*/
+.img-search {
+    float: right;
+    padding-left: 20px;
+    width: 30px;
+    height: 30px;
+
+}
+
+/*内容区域背景颜色*/
+#bg-content {
+    background-color: #e0d9c4;
+}
+
+.act-img-bg {
+    padding-top: 30px;
+
+}
+
+ul li {
+    padding-top: 50px;
+}
