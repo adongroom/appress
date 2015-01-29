@@ -1,0 +1,17 @@
+
+.idea
+android.iml
+CordovaLib.iml
+/pom.xml
+
+# Eclipse
+.project
+.classpath
+/.settings
+
+# Maven
+/target
+
+# Gradle
+/.gradle
+/build
