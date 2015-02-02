@@ -8,12 +8,20 @@
 .ui-bar-g {
     background-color: red;
 }
+.ui-bar-h {
+   background-image: url("../img/bg_geren.png");
+   background-size: 100% 100%;
+}
+.ui-bar-p {
+   background-image: url("../img/icon_touxiang.png");
+   background-size: 100% 100%;
+}
+
 /*手机列表项背景*/
 .ui-icon-home-bg_wen {
     background-image: url("../img/bg_wen.png");
     background-size: 100% 100%;
 }
-
 /*下面图标*/
 .ui-icon-home-shouye:after {
     background-image: url("../img/icon_shouye2.png");
@@ -60,4 +68,22 @@
 
 ul li {
     padding-top: 50px;
+}
+
+/*个人中心标头背景*/
+.ui-icon-person-bg {
+    background-image: url("../img/bg_geren.png");
+    background-size: 100% 100%;
+}
+/*个人中心列表头*/
+.head{
+    font-size:48px;
+    padding-left:60px;
+}
+.body{
+    font-size:36px;
+}
+/*个人中心的箭头*/
+.xiage{
+    float:right;
 }
