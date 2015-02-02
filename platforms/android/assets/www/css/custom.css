@@ -5,8 +5,10 @@
     background: #e0d9c4;
 }
 
-.ui-bar-g {
-    background-color: red;
+/*标头header*/
+.ui-bar-header {
+    color: #fffaea;
+    background-color: #8e0007;
 }
 .ui-bar-h {
    background-image: url("../img/bg_geren.png");
@@ -15,6 +17,22 @@
 .ui-bar-p {
    background-image: url("../img/icon_touxiang.png");
    background-size: 100% 100%;
+
+/*页脚footer*/
+.ui-bar-f,
+.ui-page-theme-f .ui-bar-inherit,
+html .ui-bar-f .ui-bar-inherit,
+html .ui-body-f .ui-bar-inherit,
+html body .ui-group-theme-f .ui-bar-inherit {
+    background: #F89406 /*{f-bar-background-color}*/;
+    border-color: #2A2A2A /*{f-bar-border}*/;
+    color: #ffffff /*{f-bar-color}*/;
+    text-shadow: 0 /*{f-bar-shadow-x}*/ 0 /*{f-bar-shadow-y}*/ 0 /*{f-bar-shadow-radius}*/ #000000 /*{f-bar-shadow-color}*/;
+    font-weight: bold;
+}
+.ui-bar-footer {
+    color: #ffffff;
+    background-color: #7e7e7e;
 }
 
 /*手机列表项背景*/

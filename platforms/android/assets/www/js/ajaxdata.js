@@ -43,17 +43,52 @@ function searchData() {
 
     }
 }
+//防止手贱用户多次点击
+var times = 0;//点击次数
+var preClickTime;//上一次点击的时间（毫秒）
+var currentClickTime;//当前点击时间
+function countClickedTimes() {
 
-function callBack() {
+    if (times === 0) {
+        preClickTime = new Date().getTime();//首次点击的时间
+        times++;
+        alert("当前点击次数:" + times);
+        return;
+    }
+    currentClickTime = new Date().getTime();
+//alert(currentClickTime - preClickTime);
+    if ((currentClickTime - preClickTime) < 3000) {//如果是3秒内重复点击
+        alert("亲，您的点击速度过快...");
+        preClickTime = currentClickTime;
+        return;
+    }
+
+    times++;
+    preClickTime = currentClickTime;
+    alert("当前点击次数:" + times);
+}
+function callBackData() {
+    var items = 10;
+    //获取页面数
+    countClickedTimes();
     $.ajax({
-        url: "http://192.168.1.166:8000/",
+        url: "http://192.168.1.166:8000/mapi/home/get/latest",
         type: "get",
+        dataType: 'json',
+        data: {"limit": items, "page": times},
         success: function (data, status) {
-            alert(data + status)
-            var c = JSON.parse(data.responseText)
-            console.log(c)
-            alert(c)
-            alert(data)
+            /*  var c = JSON.parse(data)*/
+            alert(data[0].Title)
+            alert(data[1].Content)
+            var i = 0;
+            for (i = 0; i <= items; i++) {
+                var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
+                $("[name='list']").append(list);
+                $('ul').listview();
+                $('ul').listview('refresh');
+                $("#list").find("li:last").slideDown(300)
+
+            }
 
         }
     })
