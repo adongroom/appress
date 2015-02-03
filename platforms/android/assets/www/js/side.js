@@ -17,3 +17,17 @@ jQuery(document).ready(function () {
     })
 })
 
+$(document).ready(function(){
+
+    $("#comment").click(function(){
+      $("#text").remove();
+      $("#sure").remove();
+        $("#c").append("<textarea id='text'></textarea><label id='sure' style='font-size:50%;'>确定</label>");
+    });
+    $("#praise").click(function(){
+       $("#praise").append("<label>a</label>");
+    });
+    $("#stamp").click(function(){
+       $("#stamp").append("<label>a</label>");
+    });
+})

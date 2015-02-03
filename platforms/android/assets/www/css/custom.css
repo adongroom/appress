@@ -114,3 +114,8 @@ ul li {
 .xiage{
     float:right;
 }
+/*评论，赞，踩图片效果*/
+.handle{
+    width:50%;
+    height:50%;
+}
