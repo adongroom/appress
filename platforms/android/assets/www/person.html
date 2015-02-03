@@ -15,35 +15,35 @@
 </head>
 <body>
 <div data-role="page">
-    <div data-role="header">
+    <div data-role="header" data-theme="h" data-position="fixed">
         <table>
-        <tr>
-            <td>
-                <div>
-                    <img style="float:left;padding-left:70px;padding-bottom:13px;" src="img/icon_touxiang.png"/>
-                    <div style="position:absolute;bottom:-20px;">
-                        <img style="padding-left:50px;padding-bottom:20px;" src="img/bg_huiyuan.png"/>
-                        <div style="position:relative;left:135px;bottom:85px;">
-                            <font style="font-size:36px;" color="#df000b">普通会员</font>
+            <tr>
+                <td style="width:33%;">
+                    <div style="height:50%;">
+                        <img style="float:left;padding-left:15%;padding-top:2%;padding-bottom:5%;width:50%;" src="img/icon_touxiang.png"/>
+                        <div style="position:absolute;bottom:-27%;">
+                            <img style="padding-left:3%;padding-bottom:7%;width:22%;height:35%;" src="img/bg_huiyuan.png"/>
+                            <div style="position:absolute;bottom:60%;left:7%;">
+                                <font style="font-size:5%;" color="#df000b">普通会员</font>
+                            </div>
                         </div>
                     </div>
+                </td>
+                <th style="width:33%;">
+                    <div style="padding-left:0;height:50%;">
+                    <font style="padding-left:20%;padding-top:40%;font-size:20px;" color="#edcf26">古风世界</font><br/><br/>
+                    <img style="float:left;padding-left:28%;width:15%;" src="img/icon_zuan.png"/>
+                    <font style="font-size:18%;padding-right:5%;" color="#edcf26">积分:1000</font>
                 </div>
-            </td>
-            <th>
-                <div style="padding-left:0;">
-                    <font style="padding-left:110px;padding-top:300px;font-size:42px;" color="#edcf26">古风世界</font><br/><br/>
-                    <img style="float:left;padding-left:130px; width: 50px" src="img/icon_zuan.png"/>
-                    <font style="font-size:36px;" color="#edcf26">积分:1000</font>
-                </div>
-            </th>
-            <td>
-                <div style="float:right;">
-                    <img style="padding-top:250px;padding-left:210px;padding-bottom:30px;" src="img/btn_qian.png"/>
-                </div>
-            </td></tr>
+                </th>
+                <td style="width:33%;">
+                    <div style="float:right;height:50%;">
+                        <img style="width:30%;padding-top:35%;padding-left:55%;padding-bottom:5%;" src="img/btn_qian.png"/>
+                    </div>
+                </td></tr>
         </table>
     </div>
-    <div data-role="content" id="bg-content">
+    <div data-role="content">
         <ul data-role="listview" name="list">
             <li><a href="#" data-icon="arrow-r"><font class="head" color="#8e0007">信息管理</font></a></li>
             <li><a href="#" data-icon="arrow-r">我的分享</a></li>
@@ -51,6 +51,7 @@
             <li><a href="#" data-icon="arrow-r">我的消息</a></li>
             <li><a href="#" data-icon="arrow-r">我的资源</a></li>
         </ul>
+        <table style="margin-top:40px;"></table>
         <ul data-role="listview" name="list">
             <li><a href="#" data-icon="arrow-r"><font class="head" color="#8e0007">账户管理</font></a></li>
             <li><a href="#" data-icon="arrow-r">个人资料</a></li>

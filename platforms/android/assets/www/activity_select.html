@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Created by hanzhendong on 2015/1/27.-->
+<!--Created by lizhou on 2015/2/2.-->
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -16,64 +16,45 @@
 <body>
 <div data-role="page">
     <div data-role="header" data-theme="header">
-        <div>
-            <h2 align="center">主题活动
-                <img src="img/icon_xinjian.png" class="img-search"/>
-                <img src="img/icon_sousuo.png" class="img-search"/>
-            </h2>
-        </div>
+        主题活动名：<input type="text"/>
+        <img src="img/icon_sousuo.png" class="img-search"/>
     </div>
     <div data-role="content" id="bg-content">
-        <ul data-role="listview" data-icon="home-bg_wen" id="result">
+        <ul data-role="listview" data-icon="home-bg_wen" name="listht">
             <li>
                 <a href="#">
-                    <img src="img/tu1.png"/>
-
                     <h3>舞台艺术互动交流</h3>
-
                     <p><b>To Peter Griffin</b></p>
                 </a>
             </li>
-            <li><a href="activity_comment.html">
-                <img src="img/tu2.png"/>
-
+            <li><a href="#">
                 <h2>各地文化风情录</h2>
-
                 <p><b>To Peter Griffin</b></p>
             </a>
             </li>
             <li><a href="#">
-                <img src="img/tu3.png"/>
-
                 <h2>舞台艺术互动交流</h2>
-
                 <p><b>To Peter Griffin</b></p>
-
                 <p>Ah, Mr. Griffin, I'm not quite sure how to say this. Kim Bassinger? Bass singer? Bassinger?</p></a>
             </li>
             <li><a href="#">
-                <img src="img/tu4.png"/>
-
                 <h2>个人收藏互动分享</h2>
-
                 <p><b>To Peter Griffin</b></p>
-
             </a>
             </li>
-
         </ul>
         <div><a href="#" onclick="callBackData()"><p align="center">查看更多...</p></a></div>
     </div>
 
-    <div data-role="footer" data-position="fixed">
+    <div data-role="footer" data-position="fixed" data-id="footernav">
         <div data-role="navbar">
             <ul>
                 <li><a href="index.html" data-icon="home-shouye" data-transition="slide" data-direction="reverse">首页</a>
                 </li>
-                <li><a href="#anylink" data-icon="home-huodong" class="ui-btn-active ">主题活动</a></li>
+                <li><a href="#anylink" data-icon="home-huodong" class="ui-btn-active ui-state-persist">主题活动</a></li>
                 <li><a href="share.html" data-role="button" data-icon="home-fenxiang" data-transition="slide">互动分享</a>
                 </li>
-                <li><a href="#anylink" data-role="button" data-icon="home-geren">个人中心</a>
+                <li><a href="person.html" data-role="button" data-icon="home-geren">个人中心</a>
                 </li>
             </ul>
         </div>

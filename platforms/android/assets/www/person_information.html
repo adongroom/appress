@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--Created by hanzhendong on 2015/1/27.-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,
+    height=device-height"/>
+    <title>个人信息</title>
+    <script src="js/jquery-mobile/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+    <script src="js/ajaxdata.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header" data-theme="header">
+        <div style="float:left;"><a href="person.html"><img width="50%" src="img/btn_fanhui.png"/></a></div>
+        <div><h2 align="center">个人信息</h2></div>
+    </div>
+    <div data-role="content" id="bg-content">
+        <img width="30%" src="img/icon_touxiang.png"/>
+        <label>账号：123456</label>
+        <label>用户呢称：啊</label>
+        <label>用户性别：女</label>
+        <label>真实姓名：韩寒</label><br/>
+        <label>个人基本信息：山东路附近的斯洛伐克</label>
+        <label>用户电话：1329484908</label>
+        <label>用户邮箱：dsfs@123.com</label>
+
+        <div><a href="#" onclick="callBackData()"><p align="center">查看更多...</p></a></div>
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-id="footernav">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="home-shouye" data-transition="slide" data-direction="reverse">首页</a>
+                </li>
+                <li><a href="#anylink" data-icon="home-huodong" class="ui-btn-active ui-state-persist">主题活动</a></li>
+                <li><a href="share.html" data-role="button" data-icon="home-fenxiang" data-transition="slide">互动分享</a>
+                </li>
+                <li><a href="#anylink" data-role="button" data-icon="home-geren">个人中心</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
