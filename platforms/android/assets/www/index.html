@@ -3,8 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="msapplication-tap-highlight" content="no"/>
+
     <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
@@ -15,67 +14,60 @@
     <script src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
     <script src="js/HRFrame/HRFrame.js"></script>
     <script src="js/ajaxdata.js"></script>
-    <script src="js/side.js"></script>
+    <script src="js/load.js"></script>
 </head>
 <body>
 <div data-role="page">
-    <div data-role="header" data-position="fixed">
+    <div data-role="header">
         <div data-role="navbar">
-            <ul>
-                <li><a href="news.html" class="ui-btn-active ui-state-persist">新闻</a></li>
-                <li><a href="recommend.html" data-transition="slide">推荐</a></li>
-                <li><a href="hottest.html" data-transition="slide">最热</a></li>
-                <li><a href="latest.html" data-transition="slide">最新</a></li>
-                <li><a href="message.html" data-transition="slide">消息</a></li>
+            <ul id="ul">
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">推荐</a></li>
+                <li><a href="#">最热</a></li>
+                <li><a href="#">最新</a></li>
+                <li><a href="#">消息</a></li>
             </ul>
         </div>
     </div>
-    <div data-role="content" id="bg-content">
-        <ul data-role="listview" data-icon="home-bg_wen" name="list">
-            <li>
-                <a href="#">
-                    <img src="img/tu1.png"/>
+    <div id="main-content">
+        <div data-role="content">
+            <ul data-role="listview" data-icon="home-bg_wen" name="list">
+                <li><a href="#">
+                    <img src="img/tu2.png"/>
 
-                    <h3>舞台艺术互动交流</h3>
+                    <h2>各地文化风情录</h2>
 
                     <p><b>To Peter Griffin</b></p>
                 </a>
-            </li>
-            <li><a href="#">
-                <img src="img/tu2.png"/>
+                </li>
+                <li><a href="#">
+                    <img src="img/tu3.png"/>
 
-                <h2>各地文化风情录</h2>
+                    <h2>舞台艺术互动交流</h2>
 
-                <p><b>To Peter Griffin</b></p>
-            </a>
-            </li>
-            <li><a href="#">
-                <img src="img/tu3.png"/>
+                    <p><b>To Peter Griffin</b></p>
 
-                <h2>舞台艺术互动交流</h2>
+                    <p>Ah, Mr. Griffin, I'm not quite sure how to say this. Kim Bassinger? Bass singer? Bassinger?</p>
+                </a>
+                </li>
+                <li><a href="#">
+                    <img src="img/tu4.png"/>
 
-                <p><b>To Peter Griffin</b></p>
+                    <h2>个人收藏互动分享</h2>
 
-                <p>Ah, Mr. Griffin, I'm not quite sure how to say this. Kim Bassinger? Bass singer? Bassinger?</p></a>
-            </li>
-            <li><a href="#">
-                <img src="img/tu4.png"/>
+                    <p><b>To Peter Griffin</b></p>
 
-                <h2>个人收藏互动分享</h2>
+                </a>
+                </li>
 
-                <p><b>To Peter Griffin</b></p>
-
-            </a>
-            </li>
-
-        </ul>
-        <div><a href="#" id="indexId"><p align="center">查看更多...</p></a></div>
+            </ul>
+            <div><a href="#" id="indexId"><p align="center">查看更多...</p></a></div>
+        </div>
     </div>
-
     <div data-role="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="#" data-icon="home-shouye" class="ui-btn-active ui-state-persist">首页</a></li>
+                <li><a href="#" data-icon="home-shouye" class="ui-btn-active">首页</a></li>
                 <li><a href="activity.html" data-icon="home-huodong" data-transition="slide">主题活动</a></li>
                 <li><a href="share.html" data-icon="home-fenxiang" data-transition="slide">互动分享</a></li>
                 <li><a href="person.html" data-icon="home-geren">个人中心</a>
@@ -83,7 +75,6 @@
             </ul>
         </div>
     </div>
-
 </div>
 </body>
 </html>
