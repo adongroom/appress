@@ -10,13 +10,16 @@
     color: #fffaea;
     background-color: #8e0007;
 }
+
 .ui-bar-h {
-   background-image: url("../img/bg_geren.png");
-   background-size: 100% 100%;
+    background-image: url("../img/bg_geren.png");
+    background-size: 100% 100%;
 }
+
 .ui-bar-p {
-   background-image: url("../img/icon_touxiang.png");
-   background-size: 100% 100%;
+    background-image: url("../img/icon_touxiang.png");
+    background-size: 100% 100%;
+}
 
 /*页脚footer*/
 .ui-bar-f,
@@ -30,6 +33,7 @@ html body .ui-group-theme-f .ui-bar-inherit {
     text-shadow: 0 /*{f-bar-shadow-x}*/ 0 /*{f-bar-shadow-y}*/ 0 /*{f-bar-shadow-radius}*/ #000000 /*{f-bar-shadow-color}*/;
     font-weight: bold;
 }
+
 .ui-bar-footer {
     color: #ffffff;
     background-color: #7e7e7e;
@@ -40,6 +44,7 @@ html body .ui-group-theme-f .ui-bar-inherit {
     background-image: url("../img/bg_wen.png");
     background-size: 100% 100%;
 }
+
 /*下面图标*/
 .ui-icon-home-shouye:after {
     background-image: url("../img/icon_shouye2.png");
@@ -93,15 +98,18 @@ ul li {
     background-image: url("../img/bg_geren.png");
     background-size: 100% 100%;
 }
+
 /*个人中心列表头*/
-.head{
-    font-size:48px;
-    padding-left:60px;
+.head {
+    font-size: 18px;
+    padding-left: 60px;
 }
-.body{
-    font-size:36px;
+
+.body {
+    font-size: 36px;
 }
+
 /*个人中心的箭头*/
-.xiage{
-    float:right;
+.xiage {
+    float: right;
 }
