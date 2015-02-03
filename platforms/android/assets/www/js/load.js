@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('#ul li a').click(function () {
         switch ($(this).text()) {
             case '新闻':
-                $('#main-content').load('test.html');
+                $('#main-content').load('news.html');
                 break;
             case '推荐':
                 $('#main-content').load('recommend.html');
