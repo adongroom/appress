@@ -3,9 +3,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,
-    height=device-height"/>
+    <!--<meta name="viewport"-->
+          <!--content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,-->
+    <!--height=device-height"/>-->
     <title>作品评论</title>
     <script src="js/jquery-mobile/jquery.min.js"></script>
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
@@ -13,6 +13,9 @@
     <script src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
     <script src="js/ajaxdata.js"></script>
     <script src="js/load.js"></script>
+    <style>
+        textarea.ui-input-text { min-height: 520px;  }
+    </style>
 </head>
 <body>
 <div data-role="page">
@@ -25,14 +28,7 @@
         </div>
     </div>
     <div id="bg-content">
-        <textarea style="padding: 8px 14px 0 14px;
-width: 100%;
-height: 120px;
-font-size: 16px;
-resize: vertical;
-border: none;
-background-color: #fff;
-box-sizing: border-box;"></textarea>
+        <textarea></textarea>
     </div>
 </div>
 </body>
