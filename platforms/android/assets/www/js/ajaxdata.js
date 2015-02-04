@@ -3,7 +3,7 @@
  */
 $f.config({autoLoad: true, splitChar: /\.+/g, path: "js/controller"});
 $f.call("SetServerURL");
-$f.call("initNews")
+$f.call("news.initNews")
 $(document).ready(function () {
     $('#indexId').click(function () {
         var items = 10

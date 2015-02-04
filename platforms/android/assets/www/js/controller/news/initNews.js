@@ -1,7 +1,7 @@
 /**
  * Created by hanzhendong on 2015/2/3.
  */
-$F.regist('initNews', function () {
+$F.regist('news.initNews', function () {
     $.ajax({
         url: $f.get("SERVER_URL").latestUrl,
         type: "get",
