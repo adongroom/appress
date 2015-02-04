@@ -3,7 +3,6 @@
  */
 //导航切换content内容
 $(document).ready(function () {
-
     $('#ul li a').click(function () {
         switch ($(this).text()) {
             case '新闻':
@@ -24,22 +23,5 @@ $(document).ready(function () {
             default:
                 $('#main-content').load('test.html')
         }
-
-
     })
-})
-
-$(document).ready(function(){
-
-    $("#comment").click(function(){
-      $("#text").remove();
-      $("#sure").remove();
-        $("#c").append("<textarea id='text'></textarea><label id='sure' style='font-size:50%;'>确定</label>");
-    });
-    $("#praise").click(function(){
-       $("#praise").append("<label>a</label>");
-    });
-    $("#stamp").click(function(){
-       $("#stamp").append("<label>a</label>");
-    });
 })

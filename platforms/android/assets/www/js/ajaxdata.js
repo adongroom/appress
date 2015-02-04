@@ -74,9 +74,7 @@ $('#indexId').click(function () {
                 $('ul').listview();
                 $('ul').listview('refresh');
                 $("#list").find("li:last").slideDown(300)
-
             }
-
         }
     })
 })
