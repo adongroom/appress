@@ -13,7 +13,6 @@ function searchData() {
         $('ul').listview();
         $('ul').listview('refresh');
         $("#list").find("li:last").slideDown(300)
-
     }
 }
 //防止手贱用户多次点击
