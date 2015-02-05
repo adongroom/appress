@@ -30,8 +30,6 @@ $(document).ready(function () {
                 $('#main-content').find('div').remove();
                 $('#main-content').load('test.html');
         }
-
-
     })
     /*导航切换标题*/
     $('#footer li a').click(function () {
