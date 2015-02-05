@@ -34,6 +34,9 @@ $(document).ready(function () {
     /*导航切换标题*/
     $('#footer li a').click(function () {
         switch ($(this).text()) {
+            case'首页':
+                location.reload();
+                break;
             case '主题活动':
                 $('#header-content').load('activity.html');
                 break;
