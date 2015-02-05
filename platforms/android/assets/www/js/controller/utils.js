@@ -3,15 +3,16 @@
  */
 /*测试数据*/
 function searchData() {
+    var ulList = "<ul data-role='listview' data-icon='false' id='ul-list'></ul>";
+    $('#main-content').append(ulList);
     var i = 0;
     for (i = 0; i <= 10; i++) {
         var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/><h2>个人收藏互动分享</h2><p>新增列表项</p>" + i + "</a></li>";
-        $("[name='list']").append(list);
-        $('ul').listview();
-        $('ul').listview('refresh');
-        $("#list").find("li:last").slideDown(300)
-
+        $("#ul-list").append(list);
     }
+    $("#ul-list").listview();
+    $("#ul-list").listview('refresh');
+
 }
 //防止手贱用户多次点击
 var times = 0;//点击次数
