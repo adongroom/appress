@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width,
     height=device-height"/>
-    <title>主题活动</title>
+    <title>个人中心之我的分享</title>
     <script src="js/jquery-mobile/jquery.min.js"></script>
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -18,13 +18,15 @@
     <div data-role="header" data-theme="header">
         <div>
             <h2 align="center">我的分享
+                <div style="float:left;"><a href="person.html">
+                    <img src="img/btn_fanhui.png" style="width:50%;"/></a></div>
                 <img src="img/icon_xinjian.png" class="img-search"/>
                 <img src="img/icon_sousuo.png" class="img-search"/>
             </h2>
         </div>
     </div>
     <div data-role="content" id="bg-content">
-        <ul data-role="listview" data-icon="home-bg_wen" id="result">
+        <ul data-role="listview" id="activity" data-icon="false" data-icon="home-bg_wen" id="result">
             <li>
                 <a href="#">
                     <img src="img/tu1.png"/>
