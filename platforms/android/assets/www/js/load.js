@@ -1,7 +1,11 @@
 /**
  * Created by hanzhendong on 2015/1/27.
  */
-
+$f.config({autoLoad: true, splitChar: /\.+/g, path: "js/controller"});
+/*初始化地址*/
+$f.call("ServerURL");
+/*初始化新闻*/
+$f.call("news.initNews")
 $(document).ready(function () {
     /* 导航切换content内容*/
     $('#header-ul li a').click(function () {
@@ -12,7 +16,8 @@ $(document).ready(function () {
                 break;
             case '推荐':
                 $('#main-content').find('div').remove();
-                $('#main-content').load('recommend.html');
+                $f.call("recommend.initRecommend");
+                /* $('#main-content').load('recommend.html');*/
                 break;
             case '最热':
                 $('#main-content').find('div').remove();

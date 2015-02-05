@@ -1,16 +1,16 @@
 /**
  * Created by hanzhendong on 2015/2/3.
  */
-$F.regist('news.initNews', function () {
+$F.regist('recommend.initRecommend', function () {
     $.ajax({
-        url: $f.get("SERVER_URL").latestUrl,
+        url: $f.get("SERVER_URL").recommendUrl,
         type: "get",
         dataType: 'json',
         data: {"limit": 10, "page": 1},
         success: function (data, status) {
-            console.log("初始化新闻+++++++++++++")
+            console.log("初始化推荐+++++++++")
             /*  var c = JSON.parse(data)*/
-            /* alert(data[0].Title)
+            /*  alert(data[0].Title)
              alert(data[1].Content)*/
             var ulList = "<ul data-role='listview' data-icon='false' id='ul-list'></ul>"
             $('#main-content').append(ulList)
