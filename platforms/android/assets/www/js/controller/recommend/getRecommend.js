@@ -20,9 +20,10 @@ $F.regist('recommend.getRecommend', function () {
             for (i = 0; i <= items; i++) {
                 var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
                 $("#ul-list").append(list);
+                $("#ul-list").listview('refresh');
             }
-            $("#ul-list").listview();
-            $("#ul-list").listview('refresh');
+            /* $("#ul-list").listview();*/
+
         }
     })
 })
