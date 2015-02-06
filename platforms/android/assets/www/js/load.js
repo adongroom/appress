@@ -5,22 +5,22 @@ $f.config({autoLoad: true, splitChar: /\.+/g, path: "js/controller"});
 /*初始化地址*/
 $f.call("ServerURL");
 /*初始化新闻*/
-$f.call("news.initNews");
+$f.call("news.getNews");
 $(document).ready(function () {
     /* 导航切换content内容*/
     $('#header-ul li a').click(function () {
         switch ($(this).text()) {
             case '新闻':
-                $('#main-content').find('div').remove();
-                $f.call("news.initNews");
+                $('#ul-list').find('div').remove();
+                $f.call("news.getNews");
                 break;
             case '推荐':
-                $('#main-content').find('div').remove();
-                $f.call("recommend.initRecommend");
+                $('#ul-list').find('div').remove();
+                $f.call("recommend.getRecommend");
                 /* $('#main-content').load('recommend.html');*/
                 break;
             case '最热':
-                $('#main-content').find('div').remove();
+                $('#ul-list').find('div').remove();
                 $f.call("hotness.getHotness");
                 break;
             case '最新':

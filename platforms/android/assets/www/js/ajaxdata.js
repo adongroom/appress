@@ -12,6 +12,5 @@ $(document).ready(function () {
                 $f.call('recommend.getRecommend')
                 break;
         }
-
     })
 })

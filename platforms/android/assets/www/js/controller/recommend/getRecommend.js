@@ -2,9 +2,9 @@
  * Created by hanzhendong on 2015/2/5.
  */
 $F.regist('recommend.getRecommend', function () {
-    var items = 10
-    var pageNum = parseInt($('#main-content').find('li').length / 10)
-    console.log(pageNum + "页数")
+    var items = 10;
+    var pageNum = parseInt($('#main-content').find('li').length / 10);
+    console.log(pageNum + "页数");
     $.ajax({
         url: $f.get("SERVER_URL").recommendUrl,
         type: "get",
@@ -20,11 +20,9 @@ $F.regist('recommend.getRecommend', function () {
             for (i = 0; i <= items; i++) {
                 var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
                 $("#ul-list").append(list);
-                $("#ul-list").listview();
                 $("#ul-list").listview('refresh');
-                $("#ul-list").find("li:last").slideDown(300)
-
             }
+            /* $("#ul-list").listview();*/
 
         }
     })
