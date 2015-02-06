@@ -11,28 +11,28 @@ $(document).ready(function () {
     $('#header-ul li a').click(function () {
         switch ($(this).text()) {
             case '新闻':
-                $('#ul-list').find('div').remove();
+                $('#ul-list').find('li').remove();
                 $f.call("news.getNews");
                 break;
             case '推荐':
-                $('#ul-list').find('div').remove();
+                $('#ul-list').find('li').remove();
                 $f.call("recommend.getRecommend");
                 /* $('#main-content').load('recommend.html');*/
                 break;
             case '最热':
-                $('#ul-list').find('div').remove();
+                $('#ul-list').find('li').remove();
                 $('#main-content').load('hottest.html');
                 break;
             case '最新':
-                $('#main-content').find('div').remove();
+                $('#ul-list').find('li').remove();
                 $('#main-content').load('latest.html');
                 break;
-            case '消息':
-                $('#main-content').find('div').remove();
+            case '文化':
+                $('#ul-list').find('li').remove();
                 $('#main-content').load('message.html');
                 break;
             default:
-                $('#main-content').find('div').remove();
+                $('#ul-list').find('li').remove();
                 $('#main-content').load('test.html');
         }
     })
