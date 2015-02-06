@@ -4,7 +4,7 @@
 $F.regist('news.getNews', function () {
     var items = 10;
     var pageNum = parseInt($('#main-content').find('li').length / 10);
-    console.log(pageNum + "页数");
+    console.log(pageNum + "页数+++++");
     $.ajax({
         url: $f.get("SERVER_URL").latestUrl,
         type: "get",
@@ -15,13 +15,15 @@ $F.regist('news.getNews', function () {
             /*  var c = JSON.parse(data)*/
             /*alert(data[0].Title)
              alert(data[1].Content)*/
+           /* $("#ul-list").listview();*/
             var i = 0;
             for (i = 0; i <= items; i++) {
                 var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
                 $("#ul-list").append(list);
+                $("#ul-list").listview('refresh');
             }
-            $("#ul-list").listview();
-            $("#ul-list").listview('refresh');
+
+
         }
     })
 })
