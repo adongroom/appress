@@ -4,10 +4,6 @@
 $F.regist('recommend.getRecommend', function () {
     var items = 10;
     var pageNum = parseInt($('#main-content').find('li').length / 10);
-<<<<<<< HEAD
-    //页数
-=======
->>>>>>> 34fbfb5f3424903fdcad4885fb1c457e0538babf
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "页数");
     $.ajax({
