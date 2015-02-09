@@ -9,16 +9,17 @@ $(document).ready(function () {
                 $f.call('news.getNews');
                 break;
             case '推荐':
-                $f.call('recommend.getRecommend')
+                $f.call('recommend.getRecommend');
                 break;
         }
     });
-    $('#act-moreId').click(function () {
-        switch ($('#footer li a[class*=active]'.text())) {
+    $('#fMoreId').click(function () {
+        switch ($('#footer li a[class*=active]').text()) {
             case '主题活动':
                 $f.call('activity.getActivity');
                 break;
             case '互动分享':
+                $f.call('share.getShare');
                 break;
         }
     })

@@ -47,8 +47,8 @@ $(document).ready(function () {
                 $f.call('activity.getActivity');
                 break;
             case '互动分享':
-                /* $('#header-ul').find('div').remove();*/
                 $('#header-content').load('share.html');
+                $f.call('share.getShare');
                 break;
             case '个人中心':
                 $('#header-content').load('person.html');
