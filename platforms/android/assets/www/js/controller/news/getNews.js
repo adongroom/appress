@@ -13,9 +13,8 @@ $F.regist('news.getNews', function () {
         data: {"limit": items, "page": pageNum},
         success: function (data, status) {
             console.log("获取新闻++++++++++");
-            var i = 0;
-            for (i = 0; i < data.length; i++) {
-                var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
+            for (var i = 0; i < data.length; i++) {
+                var list = "<li><a href='news_details.html'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
                 $("#ul-list").append(list);
                 $("#ul-list").listview('refresh');
             }

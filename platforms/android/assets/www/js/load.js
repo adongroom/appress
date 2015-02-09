@@ -44,6 +44,7 @@ $(document).ready(function () {
                 break;
             case '主题活动':
                 $('#header-content').load('activity.html');
+                $.call('activity.getActivity');
                 break;
             case '互动分享':
                 /* $('#header-ul').find('div').remove();*/
