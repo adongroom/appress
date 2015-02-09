@@ -5,7 +5,7 @@ $f.config({autoLoad: true, splitChar: /\.+/g, path: "js/controller"});
 /*初始化地址*/
 $f.call("ServerURL");
 /*初始化新闻*/
-$f.call("news.getNews")
+$f.call("news.getNews");
 $(document).ready(function () {
     /* 导航切换content内容*/
     $('#header-ul li a').click(function () {
@@ -21,7 +21,7 @@ $(document).ready(function () {
                 break;
             case '最热':
                 $('#ul-list').find('li').remove();
-                $('#main-content').load('hottest.html');
+                $f.call("hotness.getHotness");
                 break;
             case '最新':
                 $('#ul-list').find('li').remove();
@@ -35,7 +35,7 @@ $(document).ready(function () {
                 $('#ul-list').find('li').remove();
                 $('#main-content').load('test.html');
         }
-    })
+    });
     /*导航切换标题*/
     $('#footer li a').click(function () {
         switch ($(this).text()) {
@@ -55,7 +55,7 @@ $(document).ready(function () {
         }
 
     })
-})
+});
 
 $(document).ready(function () {
 
@@ -70,4 +70,4 @@ $(document).ready(function () {
     $("#stamp").click(function () {
         $("#stamp").append("<label>a</label>");
     });
-})
+});
