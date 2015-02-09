@@ -21,7 +21,7 @@ $(document).ready(function () {
                 break;
             case '最热':
                 $('#ul-list').find('li').remove();
-                $('#main-content').load('hottest.html');
+                $f.call("hotness.getHotness");
                 break;
             case '最新':
                 $('#ul-list').find('li').remove();
