@@ -13,10 +13,12 @@ $F.regist('hotness.getHotness', function () {
         data: {"limit": items, "page": pageNum},
         success: function (data, status) {
             console.log("最热最热++++++++++");
+            var items = data.items;
             var ulist = $("#ul-list");
-            for (var i = 0; i < data.length; i++) {
+
+            for (var i = 0; i < items.length; i++) {
                 var li = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/>" +
-                    "<h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
+                    "<h2>" + items[i].Title + "</h2>" + items[i].Id + "</a></li>";
                 ulist.append(li);
                 ulist.listview('refresh');
             }
