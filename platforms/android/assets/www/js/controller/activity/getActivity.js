@@ -7,14 +7,16 @@ $F.regist("activity.getActivity", function () {
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "活动页数+++++");
     $.ajax({
-        url: '',
+        url: $f.get("SERVER_URL").activityUrl,
         type: 'get',
+        data: {"limit": items, "page": pageNum},
         dataType: 'json',
-        data: {limit: items, page: pageNum},
         success: function (data, status) {
-            console.log("获取新闻++++++++++");
-            for (var i = 0; i < data.length; i++) {
-                var list = "<li><a href='activity_comment.html'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
+            //alert(data);
+            var actData = data.items
+            console.log("获取活动++++++++++");
+            for (var i = 0; i < actData.length; i++) {
+                var list = "<li><a href='activity_comment.html'><img src='img/tu4.png'/><h2>" + actData[i].Title + "</h2><P>" + actData[i].Content + "</P>" + actData[i].Id + "</a></li>";
                 $("#activity-list").append(list);
                 $("#activity-list").listview('refresh');
             }

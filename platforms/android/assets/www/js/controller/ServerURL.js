@@ -10,12 +10,14 @@ $F.regist("ServerURL", function () {
         latestUrl: host + "/mapi/home/get/latest",
         /*获取推荐地址*/
         recommendUrl: host + "/mapi/home/get/recommend",
-
+        /*新闻地址*/
         newsUrl: host + "/mapi/home/get/news",
-
+        /*最热地址*/
         hotnessUrl: host + "/mapi/home/get/hotness",
-
-        cultureUrl: host + "/mapi/home/get/culture"
+        /*文化地址*/
+        cultureUrl: host + "/mapi/home/get/culture",
+        /*主题活动地址*/
+        activityUrl: host + "/mapi/activity/get/activitytypelist"
 
     };
 

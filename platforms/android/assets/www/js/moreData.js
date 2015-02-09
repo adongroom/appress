@@ -13,8 +13,8 @@ $(document).ready(function () {
                 break;
         }
     });
-    $('act-moreId').click(function () {
-        switch ($('#footer li a[class*=active]')) {
+    $('#act-moreId').click(function () {
+        switch ($('#footer li a[class*=active]'.text())) {
             case '主题活动':
                 $f.call('activity.getActivity');
                 break;

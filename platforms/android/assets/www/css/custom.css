@@ -108,14 +108,14 @@ html body .ui-group-theme-f .ui-bar-inherit {
 }
 
 /*活动列表项配置*/
-#activity li {
+#actvity-content li {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
 }
 
 /*活动列表项背景图片*/
-#activity li > a {
+#actvity-content li > a {
     background-image: url("../img/bg_wen.png");
     background-size: 100% 100%;
 }
