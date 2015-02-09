@@ -17,7 +17,9 @@ $F.regist("ServerURL", function () {
         /*文化地址*/
         cultureUrl: host + "/mapi/home/get/culture",
         /*主题活动地址*/
-        activityUrl: host + "/mapi/activity/get/activitytypelist"
+        activityUrl: host + "/mapi/activity/get/activitytypelist",
+        /*互动分享地址*/
+        shareUrl: host + "/mapi/share/get/sharetypelist"
 
     };
 
