@@ -25,11 +25,11 @@ $(document).ready(function () {
                 break;
             case '最新':
                 $('#ul-list').find('li').remove();
-                $('#main-content').load('latest.html');
+                $f.call("hotness.getHotness");
                 break;
             case '文化':
                 $('#ul-list').find('li').remove();
-                $('#main-content').load('message.html');
+                $f.call("culture.getCulture");
                 break;
             default:
                 $('#ul-list').find('li').remove();

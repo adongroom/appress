@@ -13,7 +13,9 @@ $F.regist("ServerURL", function () {
 
         newsUrl: host + "/mapi/home/get/news",
 
-        hotnessUrl: host + "/mapi/home/get/hotness"
+        hotnessUrl: host + "/mapi/home/get/hotness",
+
+        cultureUrl: host + "/mapi/home/get/culture"
 
     };
 

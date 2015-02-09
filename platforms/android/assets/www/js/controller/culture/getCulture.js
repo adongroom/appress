@@ -1,13 +1,13 @@
 /**
- * Created by hanzhendong on 2015/2/4.
+ * Created by HuayiSeven on 2015/2/9.
  */
-$F.regist('news.getNews', function () {
+$F.regist('culture.getCulture', function () {
     var items = 10;
     var pageNum = parseInt($('#main-content').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "页数+++++");
     $.ajax({
-        url: $f.get("SERVER_URL").newsUrl,
+        url: $f.get("SERVER_URL").cultureUrl,
         type: "get",
         dataType: 'json',
         data: {"limit": items, "page": pageNum},
@@ -18,8 +18,6 @@ $F.regist('news.getNews', function () {
                 $("#ul-list").append(list);
                 $("#ul-list").listview('refresh');
             }
-
-
         }
     })
 });
