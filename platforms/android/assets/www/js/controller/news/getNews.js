@@ -13,13 +13,15 @@ $F.regist('news.getNews', function () {
         data: {"limit": items, "page": pageNum},
         success: function (data, status) {
             console.log("获取新闻++++++++++");
-            for (var i = 0; i < data.length; i++) {
-                var list = "<li><a href='news_details.html'><img src='img/tu4.png'/><h2>" + data[i].Title + "</h2>" + data[i].Id + "</a></li>";
-                $("#ul-list").append(list);
+            //var total = data.total;
+            var items = data.items;
+
+            for (var i = 0; i < items.length; i++) {
+                var li = "<li><a href='news_details.html'><img src='img/tu4.png'/>" +
+                    "<h2>" + items[i].Title + "</h2>" + items[i].Id + "</a></li>";
+                $("#ul-list").append(li);
                 $("#ul-list").listview('refresh');
             }
-
-
         }
     })
 });
