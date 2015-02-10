@@ -103,12 +103,19 @@ html body .ui-group-theme-f .ui-bar-inherit {
 
 /*主区img调整*/
 .ui-listview li img {
-    margin-top: 12px;
+    margin-top: 11px;
     margin-left: 10px;
     /*margin-bottom: 10px;*/
     /*height: 70px;*/
 
 }
+
+.ui-listview li p {
+    font-size:0.8em;
+    color:#6A655F;
+    white-space: normal;
+}
+
 
 /*活动列表项配置*/
 #actvity-content li {

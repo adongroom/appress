@@ -18,7 +18,8 @@ $F.regist('hotness.getHotness', function () {
 
             for (var i = 0; i < items.length; i++) {
                 var li = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/>" +
-                    "<h2>" + items[i].Title + "</h2>" + items[i].Id + "</a></li>";
+                    "<h2>" + items[i].Title + "</h2>" +
+                    "<p>" + items[i].Content + "</p></a></li>";
                 ulist.append(li);
                 ulist.listview('refresh');
             }
