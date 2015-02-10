@@ -2,33 +2,17 @@
  * Created by hanzhendong on 2015/2/4.
  */
 $F.regist('news.getNews', function () {
-    var items = 10;
-    var lilen = $('#main-content').find('li').length;
-    var pageNum = parseInt(lilen / 10);
-    pageNum = pageNum == 0 ? 1 : pageNum + 1;
-    console.log(pageNum + "页数+++++");
-    $("#moreId").hide();
-    $.ajax({
-        url: $f.get("SERVER_URL").newsUrl,
-        type: "get",
-        dataType: 'json',
-        data: {"limit": items, "page": pageNum},
-        success: function (data, status) {
-            console.log("获取新闻++++++++++");
-            var total = data.total;
-            var items = data.items;
-
+    $f.call("comm.homeList",
+        'news',
+        $f.get("SERVER_URL").newsUrl,
+        function(total, items){
             for (var i = 0; i < items.length; i++) {
-                var li = "<li><a href='news_details.html'><img src='img/tu4.png'/>" +
+                var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/>" +
                     "<h2>" + items[i].Title + "</h2>" +
                     "<p>" + items[i].Content + "</p></a></li>";
-                $("#ul-list").append(li);
-                $("#ul-list").listview('refresh');
+                $("#ul-list-news").append(list);
+                $("#ul-list-news").listview('refresh');
             }
-            if(total > $('#main-content').find('li').length){
-                $("#moreId").show();
-            }
-
         }
-    })
+    );
 });
