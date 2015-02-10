@@ -3,9 +3,11 @@
  */
 $F.regist('news.getNews', function () {
     var items = 10;
-    var pageNum = parseInt($('#main-content').find('li').length / 10);
+    var lilen = $('#main-content').find('li').length;
+    var pageNum = parseInt(lilen / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "页数+++++");
+    $("#moreId").hide();
     $.ajax({
         url: $f.get("SERVER_URL").newsUrl,
         type: "get",
@@ -13,7 +15,7 @@ $F.regist('news.getNews', function () {
         data: {"limit": items, "page": pageNum},
         success: function (data, status) {
             console.log("获取新闻++++++++++");
-            //var total = data.total;
+            var total = data.total;
             var items = data.items;
 
             for (var i = 0; i < items.length; i++) {
@@ -23,6 +25,10 @@ $F.regist('news.getNews', function () {
                 $("#ul-list").append(li);
                 $("#ul-list").listview('refresh');
             }
+            if(total > $('#main-content').find('li').length){
+                $("#moreId").show();
+            }
+
         }
     })
 });

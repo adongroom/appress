@@ -6,6 +6,7 @@ $F.regist('culture.getCulture', function () {
     var pageNum = parseInt($('#main-content').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "页数+++++");
+    $("#moreId").hide();
     $.ajax({
         url: $f.get("SERVER_URL").cultureUrl,
         type: "get",
@@ -14,6 +15,7 @@ $F.regist('culture.getCulture', function () {
         success: function (data, status) {
             console.log("获取新闻++++++++++");
             var items = data.items;
+            var total = data.total;
 
             for (var i = 0; i < items.length; i++) {
                 var li = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/>" +
@@ -21,6 +23,10 @@ $F.regist('culture.getCulture', function () {
                     "<p>" + items[i].Content + "</p></a></li>";
                 $("#ul-list").append(li);
                 $("#ul-list").listview('refresh');
+            }
+
+            if(total > $('#main-content').find('li').length){
+                $("#moreId").show();
             }
         }
     })

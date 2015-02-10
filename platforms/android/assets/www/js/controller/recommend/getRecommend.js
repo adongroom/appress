@@ -6,6 +6,7 @@ $F.regist('recommend.getRecommend', function () {
     var pageNum = parseInt($('#main-content').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "页数");
+    $("#moreId").hide();
     $.ajax({
         url: $f.get("SERVER_URL").recommendUrl,
         type: "get",
@@ -13,6 +14,7 @@ $F.regist('recommend.getRecommend', function () {
         data: {"limit": items, "page": pageNum},
         success: function (data, status) {
             console.log("获取推荐+++++++++++");
+            var total = data.total;
             var items = data.items;
 
             for (var i = 0; i < items.length; i++) {
@@ -21,6 +23,10 @@ $F.regist('recommend.getRecommend', function () {
                     "<p>" + items[i].Content + "</p></a></li>";
                 $("#ul-list").append(list);
                 $("#ul-list").listview('refresh');
+            }
+
+            if(total > $('#main-content').find('li').length){
+                $("#moreId").show();
             }
         }
     })

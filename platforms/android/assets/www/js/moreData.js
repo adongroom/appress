@@ -11,6 +11,15 @@ $(document).ready(function () {
             case '推荐':
                 $f.call('recommend.getRecommend');
                 break;
+            case '最新':
+                $f.call('latest.getLatest');
+                break;
+            case '最热':
+                $f.call('hotness.getHotness');
+                break;
+            case '文化':
+                $f.call('culture.getCulture');
+                break;
         }
     });
     $('#fMoreId').click(function () {
