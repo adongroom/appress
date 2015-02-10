@@ -16,7 +16,7 @@ $F.regist("activity.getActivity", function () {
             var actData = data.items
             console.log("获取活动++++++++++");
             for (var i = 0; i < actData.length; i++) {
-                var list = "<li><a href='activity_comment.html'><img src='img/tu4.png'/><h2>" + actData[i].Title + "</h2><P>" + actData[i].Content + "</P>" + actData[i].Id + "</a></li>";
+                var list = "<li><a href='activity_handle.html'><img src='img/tu4.png'/><h2>" + actData[i].Title + "</h2><P>" + actData[i].Content + "</P>" + actData[i].Id + "</a></li>";
                 $("#activity-list").append(list);
                 $("#activity-list").listview('refresh');
             }
