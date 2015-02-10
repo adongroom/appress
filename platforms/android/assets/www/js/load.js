@@ -6,34 +6,44 @@ $f.config({autoLoad: true, splitChar: /\.+/g, path: "js/controller"});
 $f.call("ServerURL");
 /*初始化新闻*/
 $f.call("news.getNews");
+$f.call("recommend.getRecommend");
+$f.call("latest.getLatest");
+$f.call("hotness.getHotness");
+
+$f.call("culture.getCulture");
+
 $(document).ready(function () {
     /* 导航切换content内容*/
     $('#header-ul li a').click(function () {
+        console.log("上面导航切换");
+        $('#div-news').hide();
+        $('#div-recommend').hide();
+        $('#div-latest').hide();
+        $('#div-hotness').hide();
+        $('#div-culture').hide();
         switch ($(this).text()) {
             case '新闻':
-                $('#ul-list').find('li').remove();
-                $f.call("news.getNews");
+                console.log("切换到新闻");
+                $('#div-news').show();
                 break;
             case '推荐':
-                $('#ul-list').find('li').remove();
-                $f.call("recommend.getRecommend");
-                /* $('#main-content').load('recommend.html');*/
+                console.log("切换到推荐");
+                $('#div-recommend').show();
                 break;
             case '最热':
-                $('#ul-list').find('li').remove();
-                $f.call("hotness.getHotness");
+                console.log("切换到最热");
+                $('#div-hotness').show();
                 break;
             case '最新':
-                $('#ul-list').find('li').remove();
-                $f.call("hotness.getHotness");
+                console.log("切换到最新");
+                $('#div-latest').show();
                 break;
             case '文化':
-                $('#ul-list').find('li').remove();
-                $f.call("culture.getCulture");
+                console.log("切换到文化");
+                $('#div-culture').show();
                 break;
             default:
-                $('#ul-list').find('li').remove();
-                $('#main-content').load('test.html');
+                $('#div-news').show();
         }
     });
     /*导航切换标题*/
