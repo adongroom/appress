@@ -6,6 +6,7 @@ $F.regist('hotness.getHotness', function () {
     var pageNum = parseInt($('#main-content').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "页数");
+    $("#moreId").hide();
     $.ajax({
         url: $f.get("SERVER_URL").hotnessUrl,
         type: "get",
@@ -13,6 +14,7 @@ $F.regist('hotness.getHotness', function () {
         data: {"limit": items, "page": pageNum},
         success: function (data, status) {
             console.log("最热最热++++++++++");
+            var total = data.total;
             var items = data.items;
             var ulist = $("#ul-list");
 
@@ -24,7 +26,9 @@ $F.regist('hotness.getHotness', function () {
                 ulist.listview('refresh');
             }
 
-
+            if(total > $('#main-content').find('li').length){
+                $("#moreId").show();
+            }
         }
     })
 });
