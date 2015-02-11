@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--Created by hanzhendong on 2015/2/9.-->
+<html>
+<head lang="en">
+
+</head>
+<body>
+<div id="topic" data-role="page" >
+    <script type="text/javascript">
+        function getParam(name){
+            var url = $('#topic').attr('data-url');
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = url.substr(url.indexOf('?')+1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            else{
+                return null;
+            }
+        }
+        function topic(){
+            var id = getParam("id");
+            var type = getParam("type");
+            switch (type) {
+                case 'news':
+                    $('#topic-type').html('新闻内容');
+                    break;
+                case 'recommend':
+                    $('#topic-type').html('推荐内容');
+                    break;
+                case 'latest':
+                    $('#topic-type').html('最新内容');
+                    break;
+                case 'hotness':
+                    $('#topic-type').html('最热内容');
+                    break;
+                case 'culture':
+                    $('#topic-type').html('文化内容');
+                    break;
+            }
+            $.ajax({
+                url: $f.get("SERVER_URL").topicUrl,
+                type: "get",
+                dataType: 'json',
+                data: {"id": id},
+                success: function (data) {
+                    $('#topic-title').html(data.Title);
+                    $('#topic-content').html(data.Content);
+                }
+            })
+        }
+        topic();
+    </script>
+    <div data-role="header" data-theme="header">
+        <div>
+            <div style="float:left;">
+                <a href="index.html">
+                    <img src="img/btn_fanhui.png" style="width:50%;"/>
+                </a>
+            </div>
+            <h3 id="topic-type" align="center">
+                新闻详情
+            </h3>
+        </div>
+    </div>
+    <div data-role="content">
+        <div style="text-align: center">
+            <h3 id="topic-title"></h3>
+        </div>
+        <div>
+            <p id="topic-content"></p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>

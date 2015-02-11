@@ -8,6 +8,6 @@ function getWorks(id) {
 };
 /*获取作品详细*/
 function getWorkDetail(id) {
-    $('#pageId').load('work_detail.html');
+    $('#main').load('work_detail.html');
     $f.call('activity.getWorkDetail', id);
 }

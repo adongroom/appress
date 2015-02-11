@@ -7,7 +7,8 @@ $F.regist('latest.getLatest', function () {
         $f.get("SERVER_URL").latestUrl,
         function(total, items){
             for (var i = 0; i < items.length; i++) {
-                var list = "<li><a href='http://www.baidu.com'><img src='img/tu4.png'/>" +
+                var list = "<li><a href='topic.html?id="+items[i].Id+"&type=latest'>" +
+                    "<img src='img/tu4.png'/>" +
                     "<h2>" + items[i].Title + "</h2>" +
                     "<p>" + items[i].Content + "</p></a></li>";
                 $("#ul-list-latest").append(list);
