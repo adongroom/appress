@@ -5,4 +5,9 @@
 function getWorks(id) {
     $('#header-content').load('activity_handle.html');
     $f.call('activity.getWorks', id);
+};
+/*获取作品详细*/
+function getWorkDetail(id) {
+    $('#pageId').load('work_detail.html');
+    $f.call('activity.getWorkDetail', id);
 }
