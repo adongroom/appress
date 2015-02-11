@@ -21,7 +21,7 @@ $F.regist("ServerURL", function () {
         /*互动分享地址*/
         shareUrl: host + "/mapi/share/get/sharetypelist",
         /*作品地址*/
-        workUrl: host + "/mapi/activity/get/activitytype"
+        workUrl: host + "/mapi/activity/get/activityarticlelist"
 
     };
 

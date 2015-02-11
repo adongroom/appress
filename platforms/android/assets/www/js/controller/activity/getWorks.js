@@ -9,29 +9,32 @@ $F.regist('activity.getWorks', function (actTypeId) {
     $.ajax({
         url: $f.get("SERVER_URL").workUrl,
         type: 'get',
-        data: {"id": actTypeId},
+        data: {"nid": actTypeId, "limit": items, "page": pageNum},
         dataType: 'json',
         success: function (data, status) {
             console.log("获取作品++++++++++");
-            for (var i = 0; i < data.length; i++) {
+            var total = data.total;
+            var WorkData = data.items;
+            for (var i = 0; i < WorkData.length; i++) {
+                alert(WorkData[i].Title)
                 var list = "<li><a href='#'><img src='img/tu4.png'/><h2>"
-                    + data[i].Title
+                    + WorkData[i].Title
                     + "</h2><P>"
-                    + data[i].Content
+                    + WorkData[i].Content
                     + "</P>"
-                    + data[i].Id
+                    + WorkData[i].Id
                     + "<div style='float:right'>"
-                        + "<div>"
-                            + "<div style='float: right'>"
-                            + "<img src='img/btn_cai.png'/>"
-                            + "</div>"
-                            + "<div style='float: right'>"
-                            + "<img src='img/btn_zan.png'/>"
-                            + "</div>"
-                            + "<div style='float: right'>"
-                            + "<img src='img/btn_pinglun.png'/>"
-                            + "</div>"
-                        + "</div>"
+                    + "<div>"
+                    + "<div style='float: right'>"
+                    + "<img src='img/btn_cai.png'/>"
+                    + "</div>"
+                    + "<div style='float: right'>"
+                    + "<img src='img/btn_zan.png'/>"
+                    + "</div>"
+                    + "<div style='float: right'>"
+                    + "<img src='img/btn_pinglun.png'/>"
+                    + "</div>"
+                    + "</div>"
                     + "</div>"
                     + "</a></li>";
                 $("#ul-work").append(list);
