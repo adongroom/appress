@@ -20,7 +20,9 @@ $F.regist("ServerURL", function () {
         activityUrl: host + "/mapi/activity/get/activitytypelist",
         /*互动分享地址*/
         shareUrl: host + "/mapi/share/get/sharetypelist",
-
+        /*作品地址*/
+        workUrl: host + "/mapi/activity/get/activityarticlelist",
+        //获取文章信息
         topicUrl: host + "/mapi/home/get/homecontent"
 
     };

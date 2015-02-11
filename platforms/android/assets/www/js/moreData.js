@@ -3,19 +3,19 @@
  */
 
 $(document).ready(function () {
-    $("#more-news").click(function(){
+    $("#more-news").click(function () {
         $f.call("news.getNews");
     });
-    $("#more-recommend").click(function(){
+    $("#more-recommend").click(function () {
         $f.call("recommend.getRecommend");
     });
-    $("#more-hotness").click(function(){
+    $("#more-hotness").click(function () {
         $f.call("hotness.getHotness");
     });
-    $("#more-latest").click(function(){
+    $("#more-latest").click(function () {
         $f.call("latest.getLatest");
     });
-    $("#more-culture").click(function(){
+    $("#more-culture").click(function () {
         $f.call("culture.getCulture");
     });
     $('#fMoreId').click(function () {
@@ -27,5 +27,5 @@ $(document).ready(function () {
                 $f.call('share.getShare');
                 break;
         }
-    })
+    });
 });
