@@ -20,6 +20,19 @@ $F.regist('activity.getWorks', function (actTypeId) {
                     + data[i].Content
                     + "</P>"
                     + data[i].Id
+                    + "<div style='float:right'>"
+                        + "<div>"
+                            + "<div style='float: right'>"
+                            + "<img src='img/btn_cai.png'/>"
+                            + "</div>"
+                            + "<div style='float: right'>"
+                            + "<img src='img/btn_zan.png'/>"
+                            + "</div>"
+                            + "<div style='float: right'>"
+                            + "<img src='img/btn_pinglun.png'/>"
+                            + "</div>"
+                        + "</div>"
+                    + "</div>"
                     + "</a></li>";
                 $("#ul-work").append(list);
                 $("#ul-work").listview('refresh');
