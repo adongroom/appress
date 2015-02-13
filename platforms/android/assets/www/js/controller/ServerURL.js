@@ -23,7 +23,8 @@ $F.regist("ServerURL", function () {
         /*作品地址*/
         workUrl: host + "/mapi/activity/get/activityarticlelist",
         //获取文章信息
-        topicUrl: host + "/mapi/home/get/homecontent"
+        topicUrl: host + "/mapi/home/get/homecontent",
+        culturecontentUrl: host + "/mapi/home/get/culturecontent"
 
     };
 
