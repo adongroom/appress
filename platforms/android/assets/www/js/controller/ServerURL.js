@@ -6,6 +6,7 @@ $F.regist("ServerURL", function () {
     var host = 'http://192.168.1.24:8000';
 
     this.SERVER_URL = {
+        host: host,
         //获取最新的地址
         latestUrl: host + "/mapi/home/get/latest",
         /*获取推荐地址*/

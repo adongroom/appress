@@ -6,9 +6,12 @@ $F.regist('culture.getCulture', function () {
         'culture',
         $f.get("SERVER_URL").cultureUrl,
         function(total, items){
+            var host = $f.get("SERVER_URL").host;
             for (var i = 0; i < items.length; i++) {
-                var list = "<li><a href='topic.html?id="+items[i].Id+"&type=culture'>" +
-                    "<img src='img/tu4.png'/>" +
+                var item = items[i];
+                var img = item.Headimg ? host + item.Headimg : 'img/tu4.png';
+                var list = "<li><a href='topic.html?id=" + item.Id + "&type=culture'>" +
+                    "<img src='" + img + "'/>" +
                     "<h2>" + items[i].Name + "</h2>" +
                     "<p>" + items[i].Content + "</p></a></li>";
                 $("#ul-list-culture").append(list);
