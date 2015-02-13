@@ -21,6 +21,7 @@
         function topic(){
             var id = getParam("id");
             var type = getParam("type");
+            var url = $f.get("SERVER_URL").topicUrl;
             switch (type) {
                 case 'news':
                     $('#topic-type').html('新闻内容');
@@ -36,15 +37,20 @@
                     break;
                 case 'culture':
                     $('#topic-type').html('文化内容');
+                    url = $f.get("SERVER_URL").culturecontentUrl;
                     break;
             }
             $.ajax({
-                url: $f.get("SERVER_URL").topicUrl,
+                url: url,
                 type: "get",
                 dataType: 'json',
                 data: {"id": id},
                 success: function (data) {
-                    $('#topic-title').html(data.Title);
+                    var t = data.Title;
+                    if(!t){
+                        t = data.Name;
+                    }
+                    $('#topic-title').html(t);
                     $('#topic-content').html(data.Content);
                 }
             })
@@ -59,7 +65,7 @@
                 </a>
             </div>
             <h3 id="topic-type" align="center">
-                新闻详情
+
             </h3>
         </div>
     </div>
