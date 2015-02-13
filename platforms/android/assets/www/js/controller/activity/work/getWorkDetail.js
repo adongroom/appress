@@ -1,7 +1,7 @@
 /**
  * Created by hanzhendong on 2015/2/11.
  */
-$F.regist('activity.getWorkDetail', function (workId) {
+$F.regist('activity.work.getWorkDetail', function (workId) {
     $.ajax({
         url: $f.get("SERVER_URL").workDetailUrl,
         type: 'get',

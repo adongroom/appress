@@ -23,9 +23,6 @@ $F.regist("activity.getActivity", function () {
                     + "</h2><P>"
                     + actData[i].Content
                     + "</P>"
-                    + "<h3>"
-                    + actData[i].Id
-                    + "</h3>"
                     + "</a></li>";
                 $("#activity-list").append(list);
                 $("#activity-list").listview('refresh');
