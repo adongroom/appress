@@ -1,7 +1,7 @@
 /**
  * Created by hanzhendong on 2015/2/10.
  */
-$F.regist('activity.getWorks', function (actTypeId) {
+$F.regist('activity.work.getWorks', function (actTypeId) {
     var items = 10;
     var pageNum = parseInt($('#ul-work').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
@@ -21,21 +21,22 @@ $F.regist('activity.getWorks', function (actTypeId) {
                     + "</h2><P>"
                     + WorkData[i].Content
                     + "</P>"
-                    + WorkData[i].Id
-                    + "<div style='float:right'>"
-                    + "<div>"
+                    + "</a>"
+                    + "<div class='ui-grid-b'>"
                     + "<div style='float: right'>"
-                    + "<img src='img/btn_cai.png'/>"
-                    + "</div>"
-                    + "<div style='float: right'>"
-                    + "<img src='img/btn_zan.png'/>"
+                    + "<img src='img/btn_cai.png' onclick='onStamp(" + WorkData[i].Id + ")'/>"
                     + "</div>"
                     + "<div style='float: right'>"
-                    + "<img src='img/btn_pinglun.png'/>"
+                    + "<img src='img/btn_zan.png' onclick='onLike(" + WorkData[i].Id + ")'/>"
+                        /*  + "<p class='ui-li-count' style='float: right'>"
+                         + 6
+                         + "</p>"*/
+                    + "</div>"
+                    + "<div style='float: right'>"
+                    + "<a href='#' onclick='getComment(" + WorkData[i].Id + ")'><img src='img/btn_pinglun.png'/></a>"
                     + "</div>"
                     + "</div>"
-                    + "</div>"
-                    + "</a></li>";
+                    + "</li>";
                 $("#ul-work").append(list);
                 $("#ul-work").listview('refresh');
             }

@@ -25,7 +25,13 @@ $F.regist("ServerURL", function () {
         /*作品详情地址*/
         workDetailUrl: host + "/mapi/activity/get/activityarticle",
         //获取文章信息
-        topicUrl: host + "/mapi/home/get/homecontent"
+        topicUrl: host + "/mapi/home/get/homecontent",
+        //踩作品
+        stampUrl: host + "/mapi/post/dislike",
+        //赞作品
+        likeUrl: host + "/mapi/post/like",
+        //赞作品
+        commentUrl: host + "/mapi/get/replylist"
 
     };
 
