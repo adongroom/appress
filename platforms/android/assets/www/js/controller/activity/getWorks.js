@@ -16,8 +16,7 @@ $F.regist('activity.getWorks', function (actTypeId) {
             var total = data.total;
             var WorkData = data.items;
             for (var i = 0; i < WorkData.length; i++) {
-                alert(WorkData[i].Title)
-                var list = "<li><a href='#'><img src='img/tu4.png'/><h2>"
+                var list = "<li><a onclick='getWorkDetail(" + WorkData[i].Id + ")'><img src='img/tu4.png'/><h2>"
                     + WorkData[i].Title
                     + "</h2><P>"
                     + WorkData[i].Content
