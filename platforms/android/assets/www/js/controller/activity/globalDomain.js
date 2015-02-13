@@ -26,6 +26,13 @@ function onLike(tid) {
 };
 /*评论详情*/
 function getComment(tid) {
-    $('#main').load('activity_comment.html');
+    //$('#main').load('activity_comment.html');
+    /* alert(tid)*/
+    // var pageData = {url: 'activity_comment.html', type: 'get', data: {tid: tid}};
+    $.mobile.changePage('activity_comment.html?tid=' + tid + '', 'slideup');
+    //$.mobile.changePage({url: "activity_comment.html", type: "get", data: {tid: tid}});
     $f.call('activity.work.getComment', tid);
+}
+function onComment(workId) {
+    alert($('#commentId').val() + workId)
 }

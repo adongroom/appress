@@ -15,7 +15,8 @@ $F.regist('activity.work.getComment', function (tid) {
             var liTotal = "<li data-role='list-divider'>评论列表"
                 + "<span class='ui-li-count'>"
                 + total
-                + "</span></li>";
+                + "</span>"
+                + "</li>";
             $("#ul-comment").append(liTotal);
             for (var i = 0; i < comData.length; i++) {
                 var list = "<li>"

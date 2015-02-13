@@ -135,3 +135,6 @@ html body .ui-group-theme-f .ui-bar-inherit {
     float: right;
 }
 
+textarea.ui-input-text {
+    min-height: 520px;
+}
