@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Created by lizhou on 2015/2/2.-->
 <html>
-<head lang="en">
+<head>
     <title>作品评论详情</title>
     <script src="js/jquery-mobile/jquery.min.js"></script>
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
@@ -14,7 +14,7 @@
     <div data-role="header" data-theme="header">
         <div>
             <h2 align="center">评论详情
-                <div style="float:left;"><a href="activity_handle.html">
+                <div style="float:left;"><a href="activity_work.html">
                     <img src="img/btn_fanhui.png" style="width:50%;"/></a></div>
             </h2>
         </div>
@@ -28,13 +28,13 @@
     <div data-role="footer" data-position="fixed">
         <div data-role="navbar">
             <ul>
-                <li><a href="activity_com.html" data-transition="slide"
-                       onclick="onComment($f.call('comm.getUrlValueByKey','tid'))"><img
+                <li><a data-transition="slide"
+                       onclick="changeToComment(parseInt($('#tid').text()))"><img
                         src="img/btn_pinglun.png"/></a>
                 </li>
-                <li><a onclick="onLike($f.call('comm.getUrlValueByKey','tid'))"><img
+                <li><a onclick="onLike(parseInt($('#tid').text()))"><img
                         src="img/btn_zan.png"/></a></li>
-                <li><a onclick="onStamp($f.call('comm.getUrlValueByKey','tid'))"><img src="img/btn_cai.png"/></a></li>
+                <li><a onclick="onStamp(parseInt($('#tid').text()))"><img src="img/btn_cai.png"/></a></li>
                 </li>
             </ul>
         </div>
