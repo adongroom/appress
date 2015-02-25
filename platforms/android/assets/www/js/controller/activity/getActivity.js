@@ -32,4 +32,4 @@ $F.regist("activity.getActivity", function () {
             }
         }
     })
-})
+});
