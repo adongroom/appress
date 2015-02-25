@@ -22,17 +22,17 @@ function onLike(tid) {
 };
 /*评论详情*/
 function getComment(tid) {
-    //$('#main').load('comment_detail.html');
-    /* alert(tid)*/
-    // var pageData = {url: 'comment_detail.html', type: 'get', data: {tid: tid}};
-    $.mobile.changePage('comment_detail.html', 'slideup');
-    //$.mobile.changePage({url: "comment_detail.html", type: "get", data: {tid: tid}});
+    $.mobile.changePage('comment_detail.html', "slideup", 'reloadPage');
     $f.call('activity.work.getComment', tid);
 };
-/*评论作品*/
+/*切换到评论(发送,取消)*/
 function changeToComment(tid) {
-    $.mobile.changePage('work_comment.html', 'slideup');
-    alert(tid)
-    /* var content = $('#commentId').val();
-     $f.call('activity.work.onComment', tid, content);*/
+    $.mobile.changePage('work_comment.html?tid=' + tid + '', 'slideup', 'reloadPage');
+}
+/*提交评论内容*/
+function sendComment() {
+    /*$.mobile.changePage('work_comment.html', 'slideup');*/
+    var content = $('#commentId').val();
+    var ttid = $f.call('comm.getUrlValueByKey', 'tid');
+    $f.call('activity.work.onComment', ttid, content);
 }
