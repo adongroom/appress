@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--Created by lizhou on 2015/2/2.-->
+<html>
+<head>
+    <title>作品评论详情</title>
+    <script src="js/jquery-mobile/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+    <script src="js/controller/activity/globalDomain.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header" data-theme="header">
+        <div>
+            <h2 align="center">评论详情
+                <div style="float:left;"><a href="activity_work.html">
+                    <img src="img/btn_fanhui.png" style="width:50%;"/></a></div>
+            </h2>
+        </div>
+    </div>
+    <div data-role="content">
+        <ul data-role="listview" id="ul-comment" data-icon="false" name="none">
+        </ul>
+        <div><a href="#"><p align="center">查看更多...</p></a></div>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a data-transition="slide"
+                       onclick="changeToComment(parseInt($('#tid').text()))"><img
+                        src="img/btn_pinglun.png"/></a>
+                </li>
+                <li><a onclick="onLike(parseInt($('#tid').text()))"><img
+                        src="img/btn_zan.png"/></a></li>
+                <li><a onclick="onStamp(parseInt($('#tid').text()))"><img src="img/btn_cai.png"/></a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

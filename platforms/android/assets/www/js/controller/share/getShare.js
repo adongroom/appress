@@ -18,7 +18,7 @@ $F.regist("share.getShare", function () {
             var shareData = data.items;
             console.log("获取分享++++++++++");
             for (var i = 0; i < shareData.length; i++) {
-                var list = "<li><a href='activity_comment.html'><img src='img/tu4.png'/><h2>" + shareData[i].Title + "</h2><P>" + shareData[i].Content + "</P>" + shareData[i].Id + "</a></li>";
+                var list = "<li><a href='comment_detail.html'><img src='img/tu4.png'/><h2>" + shareData[i].Title + "</h2><P>" + shareData[i].Content + "</P>" + shareData[i].Id + "</a></li>";
                 $("#share-list").append(list);
                 $("#share-list").listview('refresh');
             }

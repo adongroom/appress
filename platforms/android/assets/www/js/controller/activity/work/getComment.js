@@ -3,7 +3,7 @@
  */
 $F.regist('activity.work.getComment', function (tid) {
     $.ajax({
-        url: $f.get("SERVER_URL").commentUrl,
+        url: $f.get("SERVER_URL").commentListUrl,
         type: 'get',
         data: {"tid": tid},
         dataType: 'json',
@@ -15,7 +15,11 @@ $F.regist('activity.work.getComment', function (tid) {
             var liTotal = "<li data-role='list-divider'>评论列表"
                 + "<span class='ui-li-count'>"
                 + total
-                + "</span></li>";
+                + "</span>"
+                + "<p id='tid'>"
+                + tid
+                + +"</p>"
+                + "</li>";
             $("#ul-comment").append(liTotal);
             for (var i = 0; i < comData.length; i++) {
                 var list = "<li>"

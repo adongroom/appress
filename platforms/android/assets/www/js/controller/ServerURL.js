@@ -32,7 +32,8 @@ $F.regist("ServerURL", function () {
         //赞作品
         likeUrl: host + "/mapi/post/like",
         //赞作品
-        commentUrl: host + "/mapi/get/replylist",
+        commentListUrl: host + "/mapi/get/replylist",
+        commentUrl: host + "/mapi/post/reply",
         culturecontentUrl: host + "/mapi/home/get/culturecontent"
 
     };
