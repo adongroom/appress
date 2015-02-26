@@ -28,6 +28,7 @@ function getComment(tid) {
 /*切换到评论(发送,取消)*/
 function changeToComment(tid) {
     $.mobile.changePage('work_comment.html?tid=' + tid + '', 'slideup', 'reloadPage');
+
 }
 /*提交评论内容*/
 function sendComment() {
@@ -35,4 +36,5 @@ function sendComment() {
     var content = $('#commentId').val();
     var ttid = $f.call('comm.getUrlValueByKey', 'tid');
     $f.call('activity.work.onComment', ttid, content);
+    getComment(ttid);
 }
