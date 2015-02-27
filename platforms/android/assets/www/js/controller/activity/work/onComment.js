@@ -4,11 +4,11 @@
 $F.regist('activity.work.onComment', function (tid, content) {
     $.ajax({
         url: $f.get("SERVER_URL").commentUrl,
-        type: 'get',
+        type: 'post',
         data: {"tid": tid, "content": content},
         dataType: 'json',
         success: function (data, status) {
-            alert(data);
+            alert(data.Msg);
         }
     })
 });
