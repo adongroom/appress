@@ -3,7 +3,7 @@
  */
 /*活动列表响应事件获取作品详情*/
 function getWorks(id) {
-    $('#header-content').load('activity_work.html');
+    $('#main').load('activity_work.html');
     $f.call('activity.work.getWorks', id);
 };
 /*获取作品详细*/
