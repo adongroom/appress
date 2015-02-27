@@ -16,7 +16,7 @@
     <script src="js/HRFrame/HRFrame.js"></script>
     <script src="js/moreData.js"></script>
     <script src="js/load.js"></script>
-    <script src="http://192.168.1.137:8081/target/target-script-min.js#anonymous"></script>
+    <!--<script src="http://192.168.1.137:8081/target/target-script-min.js#anonymous"></script>-->
 </head>
 <body>
 <div id="main" data-role="page">
@@ -54,15 +54,45 @@
                 <a href="#" id="more-culture" style="display:none;"><p align="center">查看更多...</p></a>
             </div>
         </div>
-        <!--<div><a href="#" id="moreId" style="display:none;"><p align="center">查看更多...</p></a></div>-->
     </div>
-    <div data-role="footer" data-position="fixed" id="footer">
+
+    <!--  活动  -->
+    <div id="activity" style="display: none">
+        <div data-role="header" data-theme="header" data-position="fixed" style="height: 2.5em">
+            <h2 align="center">主题活动
+                <!--<img src="img/icon_xinjian.png" class="img-search"/>-->
+                <!--<img src="img/icon_sousuo.png" class="img-search"/>-->
+            </h2>
+        </div>
+        <div data-role="content" id="actvity-content">
+            <ul data-role="listview" id="activity-list" data-icon="false">
+            </ul>
+        </div>
+        <div><a href="#" id="activity-more"><p align="center">查看更多...</p></a></div>
+    </div>
+
+    <!--  分享  -->
+    <div id="share" style="display: none" >
+        <div data-role="header" id="bg-activity" data-theme="header" data-position="fixed" style="height: 2.5em">
+            <h2 align="center" style="color: #ffffff;">互动分享
+                <!--<img src="img/icon_xinjian.png" class="img-search"/>-->
+                <!--<img src="img/icon_sousuo.png" class="img-search"/>-->
+            </h2>
+        </div>
+        <div data-role="content" style="background-color: #e0d9c4;" id="share-content">
+            <ul data-role="listview" data-icon="false" id="share-list">
+            </ul>
+        </div>
+        <div><a href="#" id="share-more"><p align="center">查看更多...</p></a></div>
+    </div>
+
+    <div data-role="footer" data-position="fixed" id="footer" data-id="footer">
         <div data-role="navbar">
             <ul>
-                <li><a href="#anylink" data-icon="home-shouye">首页</a></li>
-                <li><a href="#" data-icon="home-huodong">主题活动</a></li>
-                <li><a href="#" data-icon="home-fenxiang">互动分享</a></li>
-                <li><a href="#" data-icon="home-geren">个人中心</a>
+                <li><a href="javascript:void(0)" data-icon="home-shouye">首页</a></li>
+                <li><a href="javascript:void(0)" data-icon="home-huodong">主题活动</a></li>
+                <li><a href="javascript:void(0)" data-icon="home-fenxiang">互动分享</a></li>
+                <li><a href="javascript:void(0)" data-icon="home-geren">个人中心</a>
                 </li>
             </ul>
         </div>

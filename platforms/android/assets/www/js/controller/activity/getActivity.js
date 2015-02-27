@@ -5,7 +5,7 @@ $F.regist("activity.getActivity", function () {
     var items = 10;
     var pageNum = parseInt($('#actvity-content').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
-    $("#fMoreId").hide();
+    $("#activity-more").hide();
     console.log(pageNum + "活动页数+++++");
     $.ajax({
         url: $f.get("SERVER_URL").activityUrl,
@@ -28,7 +28,7 @@ $F.regist("activity.getActivity", function () {
                 $("#activity-list").listview('refresh');
             }
             if (total > $('#actvity-content').find('li').length) {
-                $("fMoreId").show();
+                $("activity-more").show();
             }
         }
     })

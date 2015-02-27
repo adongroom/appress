@@ -6,7 +6,7 @@ $F.regist("share.getShare", function () {
     var pageNum = parseInt($('#share-content').find('li').length / 10);
     pageNum = pageNum == 0 ? 1 : pageNum + 1;
     console.log(pageNum + "分享页数+++++");
-    $("#fMoreId").hide();
+    $("#share-more").hide();
     $.ajax({
         url: $f.get("SERVER_URL").shareUrl,
         type: 'get',
@@ -23,8 +23,8 @@ $F.regist("share.getShare", function () {
                 $("#share-list").listview('refresh');
             }
             if (total > $('#share-content').find('li').length) {
-                $("fMoreId").show();
+                $("#share-more").show();
             }
         }
     })
-})
+});

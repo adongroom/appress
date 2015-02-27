@@ -48,20 +48,33 @@ $(document).ready(function () {
     });
     /*导航切换标题*/
     $('#footer li a').click(function () {
+        $('#header-content').hide();
+        $('#activity').hide();
+        $('#share').hide();
+
         switch ($(this).text()) {
             case'首页':
-                location.reload();
+                //location.reload();
+                $('#header-content').show();
                 break;
             case '主题活动':
-                $('#header-content').load('activity.html');
-                $f.call('activity.getActivity');
+                //$('#header-content').load('activity.html');
+                $('#activity').show();
+                if( !$('#activity').attr('showed') ){
+                    $f.call('activity.getActivity');
+                    $('#activity').attr('showed', 'true');
+                }
                 break;
             case '互动分享':
-                $('#header-content').load('share.html');
-                $f.call('share.getShare');
+                //$('#header-content').load('share.html');
+                $('#share').show();
+                if( !$('#share').attr('showed')){
+                    $('#share').attr('showed', 'true');
+                    $f.call('share.getShare');
+                }
                 break;
             case '个人中心':
-                $('#header-content').load('person.html');
+                //$('#header-content').load('person.html');
                 break;
         }
 

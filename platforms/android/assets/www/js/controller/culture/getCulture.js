@@ -10,7 +10,7 @@ $F.regist('culture.getCulture', function () {
             for (var i = 0; i < items.length; i++) {
                 var item = items[i];
                 var img = item.Headimg ? host + item.Headimg : 'img/tu4.png';
-                var list = "<li><a href='topic.html?id=" + item.Id + "&type=culture'>" +
+                var list = "<li><a href='topic.html?id=" + item.Id + "&type=culture' data-transition='none'>" +
                     "<img src='" + img + "'/>" +
                     "<h2>" + items[i].Name + "</h2>" +
                     "<p>" + items[i].Content + "</p></a></li>";
