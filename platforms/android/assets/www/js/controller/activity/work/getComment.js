@@ -11,12 +11,11 @@ $F.regist('activity.work.getComment', function (tid) {
             console.log("获取评论详细++++++++++");
             var total = data.total;
             var comData = data.items;
-            console.log("获取活动++++++++++");
             var liTotal = "<li data-role='list-divider'>评论列表"
                 + "<span class='ui-li-count'>"
                 + total
                 + "</span>"
-                + "<p id='tid'>"
+                + "<p id='tid' style='display: none'>"
                 + tid
                 + +"</p>"
                 + "</li>";
